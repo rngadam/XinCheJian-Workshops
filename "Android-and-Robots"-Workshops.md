@@ -1,3 +1,3 @@
 Welcome to the XinCheJian-Workshops wiki!
 
-[[Workshop 1]]
+[[Workshop-%231:-The-Basics-for-Beginners]]
