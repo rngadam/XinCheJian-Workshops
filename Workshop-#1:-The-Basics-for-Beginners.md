@@ -28,9 +28,21 @@ If you need help, these steps may be done right before the workshop:
 1. Checkout XinCheJian-Workshop
 1. Create your own directory in XinCheJian-Workshop/Android/Participants with your github username
 
+# Checking the workshop projects and documentation
+
+in a shell (or git bash shell on Windows)
+
+    mkdir XinCheJian-Workshops
+    cd XinCheJian-Workshops
+    git init
+    git pull git@github.com:rngadam/XinCheJian-Workshops.git
+    mkdir wiki
+    cd wiki
+    git pull git@github.com:rngadam/XinCheJian-Workshops.wiki.git
+
 # Verifying the setup
 
-1. Creating the Hello World project
+1. Creating the Hello World project using the wizard
 1. Running and uploading to the phone
 1. Debugging
 
