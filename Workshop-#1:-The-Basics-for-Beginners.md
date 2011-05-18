@@ -7,6 +7,7 @@ NOTE: These are draft.  First workshop to test this will be 2011/05/18. Feel fre
 * How to setup the Eclipse and environment?
 * Basics of Android application programming
 * Writing your first Android program
+* How to commit your changes
 
 # What you will need
 
@@ -88,6 +89,7 @@ in a shell (or git bash shell on Windows)
 1. Creating the Hello World project using the wizard
 1. Running and uploading to the phone
 1. Debugging
+1. Commit a change
 
 # Overview of interaction with hardware
 
