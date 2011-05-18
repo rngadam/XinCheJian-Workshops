@@ -81,7 +81,7 @@ in a shell (or git bash shell on Windows)
     git pull git@github.com:rngadam/XinCheJian-Workshops.git
     mkdir wiki
     cd wiki
-    git pull git@github.com:rngadam/XinCheJian-Workshops-wiki.git
+    git pull git@github.com:rngadam/XinCheJian-Workshops.wiki.git
 
 # Verifying the setup
 
