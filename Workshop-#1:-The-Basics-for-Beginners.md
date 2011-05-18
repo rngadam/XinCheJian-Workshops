@@ -1,6 +1,6 @@
 NOTE: These are draft.  First workshop to test this will be 2011/05/18. Feel free to contribute!
 
-# What you will learn in this worshop
+# What you will learn in this workshop
 
 * Why use Android for robotics? 
 * What's available for Android?
@@ -11,8 +11,9 @@ NOTE: These are draft.  First workshop to test this will be 2011/05/18. Feel fre
 
 # What you will need
 
-* A MacOS X, Linux or Windows laptop
+* A MacOS X (Intel), Linux (x86 or x86_64) or Windows laptop 
 * Time: 1 hour to setup, 1 hour to do the workshop
+(PPC is not possible as the android SDK is not available in source code)
 
 # Before the workshop
 
