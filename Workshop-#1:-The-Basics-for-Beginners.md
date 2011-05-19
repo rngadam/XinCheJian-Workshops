@@ -64,12 +64,13 @@ copy the contents of your public key
 Now setup your account in github.com > Account Settings > SSH Public Keys > add a Public Key: give it a title and paste the contents into the key field.
 
 Move the private key into the right location for Linux/OSX/Unix
+
     mkdir ~/.ssh
     cp ~/public.key ~/.ssh/id_rsa
     chmod -R 600 ~/.ssh
     chmod 400 ~/.ssh/id_rsa
 
-Sorry for windows users.. find out and update this wiki! 
+Sorry for windows users.. find out and update this wiki
 
 
 # Checking the workshop projects and documentation
