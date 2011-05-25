@@ -73,6 +73,10 @@ Welcome to the XinCheJian Androids & Robots wiki!
 
 # Android communication to physical hardware
 
+* Using Bluetooth to communicate with hardware
+ * Bind your phone to RobotBase (default pin: 1234)
+ * Change AndroidManifest.xml to add "Uses permissions" for android.permission.BLUETOOTH
+ 
 # Sensing the environment
 
 # Controlling actuators
