@@ -82,9 +82,26 @@ Welcome to the XinCheJian Androids & Robots wiki!
 * Using Bluetooth to communicate with hardware
  * Bind your phone to RobotBase (default pin: 1234)
  * Change AndroidManifest.xml to add "Uses permissions" for android.permission.BLUETOOTH android.permission.BLUETOOTH_ADMIN
- * Create low-level connection class (com.xinchejian.android.Bluetooth)
- * Create Robot control interface using your connection class
- * Integrate in a UI
+ * Communication
+  * Find out bluetooth id you want to connect to
+  * Create low-level connection class (com.xinchejian.android.Bluetooth)
+  * Create Robot control interface using your connection class
+ * Add Bluetooth and Robot control as fields of your Activity, instantiated in your onCreate
+
+* Integrate in a UI
+ * Modify res/layout/main.xml
+ * add toggle button
+ * add findViewById in onCreate to create field
+ * add android.os.Handler
+ * add Runnable with following code:
+
+			if(!bluetooth.checkBluetoothAvailable())
+				bluetooth.connect();
+			toggleButton.setChecked(bluetooth.checkBluetoothAvailable());
+	                handlerTimer.postDelayed(this, 300);  
+
+* You should now be able to start the app and see if application is available or now
+* do the same for Bluetooth.isConnected()
 
 # Sensing the environment
 
