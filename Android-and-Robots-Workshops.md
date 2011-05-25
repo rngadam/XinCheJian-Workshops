@@ -73,10 +73,19 @@ Welcome to the XinCheJian Androids & Robots wiki!
 
 # Android communication to physical hardware
 
+* Write Arduino program to control actuators or read sensors
+ * Test actuator or sensor
+ * Create serial interface
+ * Test serial interface
+ * Add Bluetooth hardware module
+
 * Using Bluetooth to communicate with hardware
  * Bind your phone to RobotBase (default pin: 1234)
- * Change AndroidManifest.xml to add "Uses permissions" for android.permission.BLUETOOTH
- 
+ * Change AndroidManifest.xml to add "Uses permissions" for android.permission.BLUETOOTH android.permission.BLUETOOTH_ADMIN
+ * Create low-level connection class (com.xinchejian.android.Bluetooth)
+ * Create Robot control interface using your connection class
+ * Integrate in a UI
+
 # Sensing the environment
 
 # Controlling actuators
