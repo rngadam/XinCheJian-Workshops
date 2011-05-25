@@ -1,4 +1,4 @@
-package com.xinchejian.android.bluetooth;
+package com.xinchejian.bluetooth;
 
 import java.io.IOException;
 import java.util.Formatter;
