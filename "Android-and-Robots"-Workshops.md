@@ -15,19 +15,38 @@ Welcome to the XinCheJian Androids & Robots wiki!
 
 # Setting up an Android Development Environment
 
-* Generate a Private and Public Key
+* Create your account on github
+ * Create account
+ * Send account name to be added to the organization
+ * Generate a Private and Public Key
+ * Set your github profile to use that
 * Install git
-* Install Android SDK Release 11
-* Install Eclipse 3.6.2
-* Install Eclipse extensions 
- * Help > Install new software > works with:
+ * Use git to checkout XinCheJian-Workshop (git@github.com:xinchejian/XinCheJian-Workshops.git)
+* Install Android SDK Release 11 (decompress in your home folder)
+* Install and run Eclipse 3.6.2
+* Install Eclipse extensions (using Help > Install new software)
  * Install ADT 10.0.1 into eclipse: https://dl-ssl.google.com/android/eclipse/
- * (optional) Install eGit into eclipse: http://download.eclipse.org/egit/updates
-* Checkout XinCheJian-Workshop
-* Create your own directory in XinCheJian-Workshop/Android/Participants/<your github username>
+ * Install eGit into eclipse: http://download.eclipse.org/egit/updates
+* Set Eclipse ADT preference to point to your SDK
+ * Window > Preferences > Android > SDK location
+ * Apply > you should see a list of "Target name" ranging from Android 1.5 to Android 3.0
+* Set workspace to new folder in XinCheJian-Workshops/Android/Participants/<your github username>
 
 # "Hello World!"
 
+* Create new project 
+ * File > New > Android Project 
+ * Set the Project name to whatever you'd like: "RickyRobot"
+ * Target: Android 2.1-update1 for now
+ * Application name to whatever you'd like: "Ricky Robot"
+ * Package name: com.xinchejian.android.<your github username>.robot
+ * Create Activity: RobotUserInterface
+ * Next
+ * Skip creating a test project for now
+* Running the application
+ * Connect your phone to USB
+ * On the phone, Settings > Applications > Development > Check USB debugging
+ 
 # The Basics of an Android application
 
 # Android communication to physical hardware
