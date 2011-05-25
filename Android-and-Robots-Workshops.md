@@ -120,7 +120,7 @@ Welcome to the XinCheJian Androids & Robots wiki!
 						updownValue = progress;
 					}
 				}
-			}
+		}
 
  * Send the values from inside the timer using sendCommandString
 
