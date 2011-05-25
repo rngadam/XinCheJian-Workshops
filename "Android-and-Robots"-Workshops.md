@@ -2,10 +2,10 @@ Welcome to the XinCheJian Androids & Robots wiki!
 
 # Why use Android for robotics?
 
- * Built-in hardware is relatively cheap and powerful (GPS, accelerometers, Bluetooth, camera)
- * Built-in processing power is sufficient to do high-level processing (vision)
- * Easy-to-use development environment
- * Compact size, built-in battery
+* Built-in hardware is relatively cheap and powerful (GPS, accelerometers, Bluetooth, camera)
+* Built-in processing power is sufficient to do high-level processing (vision)
+* Easy-to-use development environment
+* Compact size, built-in battery
  
 # What you'll need to develop Android apps
 
@@ -51,8 +51,25 @@ Welcome to the XinCheJian Androids & Robots wiki!
 * Running the application
  * Connect your phone to USB
  * On the phone, Settings > Applications > Development > Check USB debugging
- 
+ * Eclipse > Run > Run As... > Eclipse Application
+
 # The Basics of an Android application
+
+* Source and packages
+* AndroidManifest.xml: permissions and intents
+* android.jar: rich library
+* R.java: generated resources references
+* Activity: user interface
+* res > layout > main.xml
+
+# Source control
+
+* Share your project
+ * Right-click project  > Team > Share > Select type git > Next > Select existing repository > Finish
+* Commit your base project 
+ * Right-click project > Commit > select all
+ * Deselect manually files in bin/
+ * Commit
 
 # Android communication to physical hardware
 
