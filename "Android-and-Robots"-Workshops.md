@@ -2,6 +2,11 @@ Welcome to the XinCheJian Androids & Robots wiki!
 
 # Why use Android for robotics?
 
+ * Built-in hardware is relatively cheap and powerful (GPS, accelerometers, Bluetooth, camera)
+ * Built-in processing power is sufficient to do high-level processing (vision)
+ * Easy-to-use development environment
+ * Compact size, built-in battery
+ 
 # What you'll need to develop Android apps
 
 * A MacOS X (Intel), Linux (x86 or x86_64) or Windows laptop
@@ -13,7 +18,7 @@ Welcome to the XinCheJian Androids & Robots wiki!
 * Git client and Eclipse extension for Git
 * An account on github.com and access to [[https://github.com/xinchejian/XinCheJian-Workshops]]
 
-# Setting up an Android Development Environment
+# Setting up an the development environment
 
 * Create your account on github
  * Create account
