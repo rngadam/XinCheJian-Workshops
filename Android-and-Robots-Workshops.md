@@ -107,7 +107,7 @@ Welcome to the XinCheJian Androids & Robots wiki!
 * Adding controls
  * Add two variables with the values you want in your activity
  * Add the appropriate widget in the layout to control those values
- * set initial values of widgets
+ * set initial values (setProgress) of widgets and defaults (setMax)
  * Add Listeners to update your values based on the widget interactions
     upDownSeekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
  * Handle events changes 
