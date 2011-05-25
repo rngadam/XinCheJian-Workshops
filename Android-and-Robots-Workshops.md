@@ -95,13 +95,33 @@ Welcome to the XinCheJian Androids & Robots wiki!
  * add android.os.Handler
  * add Runnable with following code:
 
-			if(!bluetooth.checkBluetoothAvailable())
+			if(!bluetooth.isConnected())
 				bluetooth.connect();
-			toggleButton.setChecked(bluetooth.checkBluetoothAvailable());
+			bluetoothConnectionStatusToggle.setChecked(bluetooth.checkBluetoothAvailable());
+
 	                handlerTimer.postDelayed(this, 300);  
 
-* You should now be able to start the app and see if application is available or now
-* do the same for Bluetooth.isConnected()
+ * You should now be able to start the app and see if application is available or now
+ * Do the same for Bluetooth.isConnected(): add a toogle and set its status based on the boolean value returned
+
+* Adding controls
+ * Add two variables with the values you want in your activity
+ * Add the appropriate widget in the layout to control those values
+ * set initial values of widgets
+ * Add Listeners to update your values based on the widget interactions
+    upDownSeekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+ * Handle events changes 
+		public void onProgressChanged(final SeekBar seekBar, final int progress, final boolean fromUser) {
+				if (fromUser) {
+					if (progress < RobotControl.UPDOWN_MIN_POS) {
+						updownValue = RobotControl.UPDOWN_MIN_POS;
+					} else {
+						updownValue = progress;
+					}
+				}
+			}
+
+ * Send the values from inside the timer using sendCommandString
 
 # Sensing the environment
 
