@@ -111,17 +111,6 @@ Welcome to the XinCheJian Androids & Robots wiki!
  * Add Listeners to update your values based on the widget interactions
     upDownSeekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
  * Handle events changes 
-
-    public void onProgressChanged(final SeekBar seekBar, final int progress, final boolean fromUser) {
-      if (fromUser) {
-        if (progress < RobotControl.UPDOWN_MIN_POS) {
-          updownValue = RobotControl.UPDOWN_MIN_POS;
-        } else { 
-          updownValue = progress;
-        }
-      }
-    }
-
  * Send the values from inside the timer using sendCommandString
 
 # Sensing the environment
