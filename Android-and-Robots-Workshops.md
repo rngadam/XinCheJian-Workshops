@@ -95,11 +95,10 @@ Welcome to the XinCheJian Androids & Robots wiki!
  * add android.os.Handler
  * add Runnable with following code:
 
-			if(!bluetooth.isConnected())
-				bluetooth.connect();
-			bluetoothConnectionStatusToggle.setChecked(bluetooth.checkBluetoothAvailable());
-
-                        handlerTimer.postDelayed(this, 300);  
+    if(!bluetooth.isConnected())
+        bluetooth.connect();
+    bluetoothConnectionStatusToggle.setChecked(bluetooth.checkBluetoothAvailable());
+    handlerTimer.postDelayed(this, 300);  
 
  * You should now be able to start the app and see if application is available or now
  * Do the same for Bluetooth.isConnected(): add a toogle and set its status based on the boolean value returned
