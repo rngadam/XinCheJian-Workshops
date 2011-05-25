@@ -9,4 +9,10 @@
     android:layout_height="wrap_content" 
     android:text="@string/hello"
     />
+<ToggleButton android:layout_height="wrap_content" android:text="ToggleButton" android:layout_width="wrap_content" android:id="@+id/bluetoothConnectionStatus"></ToggleButton>
+<ToggleButton android:layout_height="wrap_content" android:text="ToggleButton" android:layout_width="wrap_content" android:id="@+id/bluetoothConnected"></ToggleButton>
+<TextView android:layout_height="wrap_content" android:text="@string/UpDownControl" android:id="@+id/textView1" android:layout_width="wrap_content"></TextView>
+<SeekBar android:layout_height="wrap_content" android:layout_width="fill_parent" android:id="@+id/UpDownSeekBar"></SeekBar>
+<TextView android:layout_height="wrap_content" android:text="@string/SidewaysControl" android:id="@+id/textView2" android:layout_width="wrap_content"></TextView>
+<SeekBar android:layout_height="wrap_content" android:layout_width="fill_parent" android:id="@+id/SidewaysSeekBar"></SeekBar>
 </LinearLayout>

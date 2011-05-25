@@ -2,4 +2,6 @@
 <resources>
     <string name="hello">Hello World, RobotUserInterface!</string>
     <string name="app_name">RickyRobot</string>
+    <string name="UpDownControl">UpDown control</string>
+    <string name="SidewaysControl">Sideways Control</string>
 </resources>
