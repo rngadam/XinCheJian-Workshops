@@ -32,7 +32,7 @@ To subscribe: [android-robots+subscribe@googlegroups.com](mailto:android-robots+
 # Workshops overview
 
 * [[Preparing for the Workshops]]: do this before joining!
-* [[Workshop #1: The Basics for Beginners]]
-* [[Workshop #2: Introduction to Android development]]
-* [[Workshop #3: A detour to microcontroller development]]
-* [[Workshop #4: communicating with hardware using Bluetooth]]
+* [[Workshop #1: The Basics for Beginners]]: an overview of the basic concepts covered in more details later
+* [[Workshop #2: Introduction to Android development]]: for those who've never used Eclipse and/or Android before
+* [[Workshop #3: A detour to microcontroller development]]: for those who've never programmed a micro-controller
+* [[Workshop #4: communicating with hardware using Bluetooth]]: a more sophisticated project summarizing concepts so far
