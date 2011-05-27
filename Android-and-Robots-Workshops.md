@@ -24,6 +24,11 @@ Any question or suggestions should be sent to: [android-robots@googlegroups.com]
 
 To subscribe: [android-robots+subscribe@googlegroups.com](mailto:android-robots+subscribe@googlegroups.com)
 
+# Requisites
+
+* Programming experience (in any language)
+* Understanding of Object-Oriented concepts
+
 # Workshops overview
 
 * [[Preparing for the Workshops]]: do this before joining!
