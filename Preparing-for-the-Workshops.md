@@ -1,4 +1,4 @@
-# Before the workshop
+# Preparing for the Workshops
 
 ## Setting up an the development environment
 
