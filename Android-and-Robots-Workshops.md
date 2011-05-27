@@ -17,3 +17,11 @@ Welcome to the XinCheJian Androids & Robots wiki!
 * OEM USB (development) driver for your Android phone
 * Git client and Eclipse extension for Git
 * An account on github.com and access to [[https://github.com/xinchejian/XinCheJian-Workshops]]
+
+# Workshops overview
+
+* [[Before the workshop]]
+* [[Workshop #1: The Basics for Beginners]]
+* [[Workshop #2: Introduction to Android development]]
+* [[Workshop #3: A detour to microcontroller development]]
+* [[Workshop #4: communicating with hardware using Bluetooth]]
