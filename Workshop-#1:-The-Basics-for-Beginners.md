@@ -1,4 +1,6 @@
-# What you will learn in this workshop
+# Workshop #1: The Basics for Beginners
+
+## What you will learn in this workshop
 
 * Why use Android for robotics? 
 * What's available for Android?
