@@ -26,7 +26,7 @@ To subscribe: [android-robots+subscribe@googlegroups.com](mailto:android-robots+
 
 # Workshops overview
 
-* [Preparing for the Workshops]]: do this before joining!
+* [[Preparing for the Workshops]]: do this before joining!
 * [[Workshop #1: The Basics for Beginners]]
 * [[Workshop #2: Introduction to Android development]]
 * [[Workshop #3: A detour to microcontroller development]]
