@@ -18,9 +18,15 @@ Welcome to the XinCheJian Androids & Robots wiki!
 * Git client and Eclipse extension for Git
 * An account on github.com and access to [[https://github.com/xinchejian/XinCheJian-Workshops]]
 
+# Important: join the mailing list!
+
+Any question or suggestions should be sent to: [android-robots@googlegroups.com](mailto:android-robots@googlegroups.com)
+
+To subscribe: [android-robots+subscribe@googlegroups.com](mailto:android-robots+subscribe@googlegroups.com)
+
 # Workshops overview
 
-* [[Before the workshop]]
+* [Preparing for the Workshops]]: do this before joining!
 * [[Workshop #1: The Basics for Beginners]]
 * [[Workshop #2: Introduction to Android development]]
 * [[Workshop #3: A detour to microcontroller development]]
