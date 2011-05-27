@@ -1,1 +1,0 @@
-# Workshop #3: A detour to Arduino development
