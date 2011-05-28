@@ -147,7 +147,7 @@ public class Bluetooth {
 		}
 	}
 
-	public boolean isConnected() {
+	public synchronized boolean isConnected() {
 		return outStream != null;
 	}	
 }

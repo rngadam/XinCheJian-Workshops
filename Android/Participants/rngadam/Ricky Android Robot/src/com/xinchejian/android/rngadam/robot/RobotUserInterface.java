@@ -92,6 +92,7 @@ public class RobotUserInterface extends Activity {
         bluetooth = new Bluetooth(arduinoAddress);
         robotControl = new RobotControl(bluetooth);
 		
-        handlerTimer.postDelayed(taskTimerUpdate, 300);        
+        handlerTimer.postDelayed(taskTimerUpdate, 300);  
+        
     }
 }
