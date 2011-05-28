@@ -23,7 +23,9 @@ public class RobotUserInterface extends Activity {
 	private final Runnable taskTimerUpdate = new Runnable() {
 		public void run() {
 			if(!bluetooth.isConnected()) {
-				bluetooth.connect();
+				if(bluetooth.checkBluetoothAvailable()) {
+					bluetooth.connect();
+				}
 			} else {
 			    robotControl.sendCommandString(RobotControl.UPDOWN_AXIS, updownValue);
 			    robotControl.sendCommandString(RobotControl.SIDEWAYS_AXIS, sidewaysValue);

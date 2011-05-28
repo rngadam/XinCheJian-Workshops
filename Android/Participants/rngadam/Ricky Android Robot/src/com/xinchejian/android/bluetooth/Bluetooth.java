@@ -1,7 +1,6 @@
 package com.xinchejian.android.bluetooth;
 
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.UUID;
 
@@ -31,11 +30,11 @@ public class Bluetooth {
 
 	}
 
-	public boolean checkBluetoothAvailable() {
+	public synchronized boolean checkBluetoothAvailable() {
 		return mBluetoothAdapter != null && mBluetoothAdapter.isEnabled();
 	}
 	
-	public boolean connect() {
+	public synchronized boolean connect() {
 		Log.d(TAG, "+ ABOUT TO ATTEMPT CLIENT CONNECT +");
 
 		if (device == null) {
@@ -118,6 +117,7 @@ public class Bluetooth {
 			} catch (IOException e) {
 				Log.e(TAG, "Error writing to buffer");
 				outStream = null;
+				return;
 			}
 			// since there's no flow control (CTS/RTS), we need to temper
 			// how fast we send things...
@@ -127,6 +127,12 @@ public class Bluetooth {
 		
 	}
 
+	
+
+	public synchronized boolean isConnected() {
+		return outStream != null;
+	}	
+	
 	private void sleep(long duration) {
 		try {
 			Thread.sleep(duration);
@@ -134,20 +140,5 @@ public class Bluetooth {
 			e.printStackTrace();
 		}
 	}
-	
-	void readMessage() {
-		try {
-			final InputStream inputStream = btSocket.getInputStream();
-			while (inputStream.available() != -1) {
-				Log.d(TAG, "Read: " + inputStream.read());
-			}
-		} catch (final IOException e) {
-			Log.e(TAG, "ON RESUME: Exception during read.", e);
-			return;
-		}
-	}
 
-	public synchronized boolean isConnected() {
-		return outStream != null;
-	}	
 }
