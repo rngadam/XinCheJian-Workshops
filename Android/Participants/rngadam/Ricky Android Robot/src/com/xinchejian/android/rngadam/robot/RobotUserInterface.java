@@ -18,6 +18,8 @@ public class RobotUserInterface extends Activity {
 	private ToggleButton deviceConnectedStatusToggle;
 	private int updownValue = RobotControl.UPDOWN_DEFAULT_POS;
 	private int sidewaysValue = RobotControl.SIDEWAYS_DEFAULT_POS;
+	private int prevUpDownValue =  0;
+	private int prevSidewaysValue = 0;
 	
 	private final Handler handlerTimer = new Handler();
 	private final Runnable taskTimerUpdate = new Runnable() {
@@ -27,8 +29,15 @@ public class RobotUserInterface extends Activity {
 					bluetooth.connect();
 				}
 			} else {
-			    robotControl.sendCommandString(RobotControl.UPDOWN_AXIS, updownValue);
-			    robotControl.sendCommandString(RobotControl.SIDEWAYS_AXIS, sidewaysValue);
+				if(updownValue != prevUpDownValue) {
+					robotControl.sendCommandString(RobotControl.UPDOWN_AXIS, updownValue);
+					prevUpDownValue = updownValue;
+				}
+				if(prevSidewaysValue != sidewaysValue) {
+				    robotControl.sendCommandString(RobotControl.SIDEWAYS_AXIS, sidewaysValue);
+				    prevSidewaysValue = sidewaysValue;
+					
+				}
 			}
 			bluetoothConnectionStatusToggle.setChecked(bluetooth.checkBluetoothAvailable());
 			deviceConnectedStatusToggle.setChecked(bluetooth.isConnected());
