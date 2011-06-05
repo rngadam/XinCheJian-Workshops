@@ -103,13 +103,16 @@ public class Bluetooth {
 				return false;
 			}
 		}
+		Log.d(TAG, "Connected to Bluetooth");
 		return true;
 	}
 
 	public synchronized void sendBuffer(byte[] msgBuffer) {
 		if (outStream == null) {
-			if(!connect())
+			if(!connect()) {
+				Log.d(TAG, "Not connected to Bluetooth, calling connect");
 				return;
+			}
 		}	
 		for (final byte element : msgBuffer) {
 			try {
