@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.os.Handler;
 import android.widget.SeekBar;
+import android.widget.Toast;
 import android.widget.ToggleButton;
 
 import com.xinchejian.android.bluetooth.Bluetooth;
@@ -13,7 +14,7 @@ public class RobotUserInterface extends Activity {
     private Bluetooth bluetooth;
 	private RobotControl robotControl;
 	private static final String arduinoAddress = "00:11:03:14:02:02";
-	
+	private Toast unableToConnectBluetoothToast;
 	private ToggleButton bluetoothConnectionStatusToggle;
 	private ToggleButton deviceConnectedStatusToggle;
 	private int updownValue = RobotControl.UPDOWN_DEFAULT_POS;
@@ -24,21 +25,18 @@ public class RobotUserInterface extends Activity {
 	private final Handler handlerTimer = new Handler();
 	private final Runnable taskTimerUpdate = new Runnable() {
 		public void run() {
-			if(!bluetooth.isConnected()) {
-				if(bluetooth.checkBluetoothAvailable()) {
-					bluetooth.connect();
-				}
-			} else {
-				if(updownValue != prevUpDownValue) {
-					robotControl.sendCommandString(RobotControl.UPDOWN_AXIS, updownValue);
-					prevUpDownValue = updownValue;
-				}
-				if(prevSidewaysValue != sidewaysValue) {
-				    robotControl.sendCommandString(RobotControl.SIDEWAYS_AXIS, sidewaysValue);
-				    prevSidewaysValue = sidewaysValue;
-					
-				}
+			if(updownValue != prevUpDownValue) {
+				robotControl.sendCommandString(RobotControl.UPDOWN_AXIS, updownValue);
+				prevUpDownValue = updownValue;
 			}
+			if(prevSidewaysValue != sidewaysValue) {
+			    robotControl.sendCommandString(RobotControl.SIDEWAYS_AXIS, sidewaysValue);
+			    prevSidewaysValue = sidewaysValue;
+				
+			}
+			if(!bluetooth.isConnected()) {
+				unableToConnectBluetoothToast.show();
+			} 
 			bluetoothConnectionStatusToggle.setChecked(bluetooth.checkBluetoothAvailable());
 			deviceConnectedStatusToggle.setChecked(bluetooth.isConnected());
 	        handlerTimer.postDelayed(this, 300);   			
@@ -54,6 +52,7 @@ public class RobotUserInterface extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
 
+        unableToConnectBluetoothToast = Toast.makeText(this, "Unable to connect to bluetooth", 500);
         bluetoothConnectionStatusToggle = (ToggleButton) findViewById(R.id.bluetoothConnectionStatus);
         deviceConnectedStatusToggle = (ToggleButton) findViewById(R.id.bluetoothConnected);
         upDownSeekBar = (SeekBar) findViewById(R.id.UpDownSeekBar);

@@ -34,7 +34,7 @@ public class Bluetooth {
 		return mBluetoothAdapter != null && mBluetoothAdapter.isEnabled();
 	}
 	
-	public synchronized boolean connect() {
+	private synchronized boolean connect() {
 		Log.d(TAG, "+ ABOUT TO ATTEMPT CLIENT CONNECT +");
 
 		if (device == null) {
@@ -108,23 +108,27 @@ public class Bluetooth {
 
 	public synchronized void sendBuffer(byte[] msgBuffer) {
 		if (outStream == null) {
-			return;
+			if(!connect())
+				return;
 		}	
 		for (final byte element : msgBuffer) {
 			try {
 				outStream.write(element);
 				outStream.flush();
 			} catch (IOException e) {
-				Log.e(TAG, "Error writing to buffer");
+				Log.e(TAG, "Error writing to buffer", e);
+				try {
+					outStream.close();
+				} catch (IOException e1) {
+					e1.printStackTrace();
+				}
 				outStream = null;
 				return;
 			}
 			// since there's no flow control (CTS/RTS), we need to temper
 			// how fast we send things...
 			sleep(50);
-
 		}
-		
 	}
 
 	

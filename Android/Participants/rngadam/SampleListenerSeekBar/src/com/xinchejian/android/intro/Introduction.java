@@ -14,7 +14,7 @@ public class Introduction extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
-        valueEditText = (EditText) findViewById(R.id.value);
+        valueEditText = (EditText) findViewById(R.id.value); 
         progressSeekBar = (SeekBar) findViewById(R.id.progress);
         progressSeekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
 			
