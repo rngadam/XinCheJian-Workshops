@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="fill_parent" android:orientation="vertical" android:layout_width="match_parent">
+    <Button android:layout_width="match_parent" android:text="@string/play" android:id="@+id/playButton" android:layout_height="wrap_content" android:layout_gravity="fill_vertical"></Button>
+    <SeekBar android:layout_height="wrap_content" android:layout_width="match_parent" android:id="@+id/motoControl"></SeekBar>
+    <MediaController android:id="@+id/mediaController1" android:layout_width="wrap_content" android:layout_height="wrap_content"></MediaController>
+</LinearLayout>

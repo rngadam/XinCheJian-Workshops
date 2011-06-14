@@ -13,7 +13,7 @@ public class ShowWebPage extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
         webView = (WebView) findViewById(R.id.webkitWebView);
-        webView.loadUrl("file:/android_asset/helloworld.html");
-        //webView.loadUrl("http://www.google.com");
+        //webView.loadUrl("file:/android_asset/helloworld.html");
+        webView.loadUrl("http://www.google.com");
     }
 }

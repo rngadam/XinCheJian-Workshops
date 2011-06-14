@@ -35,7 +35,7 @@ public class RobotUserInterface extends Activity {
 				
 			}
 			if(!bluetooth.isConnected()) {
-				unableToConnectBluetoothToast.show();
+				//unableToConnectBluetoothToast.show();
 			} 
 			bluetoothConnectionStatusToggle.setChecked(bluetooth.checkBluetoothAvailable());
 			deviceConnectedStatusToggle.setChecked(bluetooth.isConnected());
